@@ -47,7 +47,7 @@ oh...
 
 right, ***how to open the case?***
 
-use a small flathead scredriver to open up the rubber tips a the bottom, then use a fat crosshead screw to open up the screws (there will be 3, each corner except one, the "dish/antennae in" side(lets call it west, to remove confusion, yes?) at the back... takes quite the strength, but ill say to reserve it, because we have got clips, which can hold up your weight, there is a slot on the other side of the antennae port side to aid you(east side), use a big flathead screwdriver to pry it open, put finger in the gap at your own risk, but it will help, get the other clips off, the clips are absent on the ports side, and there is only one clip present on the slot side, and there are 2 at the front/led/south side, one on west side, one on the northwest corner, and one on the southeast corner... after htis tireing torture, and a case with dents, we now have to unscrew the mb, BUT WAIT, unscrew the pcb antennae forst witha small cross head screw, then use a big crosshead, which you used for the case, to unscrew the MB...
+use a small flathead scredriver to open up the rubber tips a the bottom, then use a fat crosshead screw to open up the screws (there will be 3, each corner except one, the "dish/antennae in" side(lets call it west, to remove confusion, yes?) at the back... takes quite the strength, but ill say to reserve it, because we have got clips, which can hold up your weight, there is a slot on the other side of the antennae port side to aid you(east side), use a big flathead screwdriver to pry it open, put finger in the gap at your own risk, but it will help, get the other clips off, the clips are absent on the ports side, and there is only one clip present on the slot side, and there are 2 at the front/led/south side, one on west side, one on the northwest corner, and one on the southeast corner... after this tiring torture, and a case with dents, we now have to unscrew the mb, BUT WAIT, unscrew the pcb antennae forst witha small cross head screw, then use a big crosshead, which you used for the case, to unscrew the MB...
 
 
 now, back to the important point, the cpu heatsink is bad at its job, so do this processes if you have thermal paste/putty/pad at your home, i had thermal paste, i used that, by taking off a sticky sheet  on the heatsink, and then put thermal paste on the amlogic cpu(see below)... this makes it throttle less under load
@@ -57,8 +57,8 @@ now, back to the important point, the cpu heatsink is bad at its job, so do this
 ^^Amlogic S905X2 -NU cpu,
 
 4 core cortex A53, FinFET architechture, 12nm processes, 1.8 ghz
-(the redmi note 4 "mido" 
 
+(the redmi note 4 "mido" 
 (not nickel, nickel was a overheating decacore mediatek cpu, china only variant, came before mido), 
 
 was also a arm cortex A53 cpu, also with a FinFET architecture, but octacore, and 14nm processes, making it less efiicient(larger processes), but more powerful(more cores) at 2ghz)
