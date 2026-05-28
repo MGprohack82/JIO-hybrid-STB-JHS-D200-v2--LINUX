@@ -2,11 +2,12 @@
 as name suggests, I will try to put a linux distribution, like armbian(debian) into the old DDR3 jio hybrid STB from 2019.
 
 setup used for this project on the stb:
+
 DELL Latitude 7280 21.5" (intel core i5 6300U "skylake U/Y" + 8gb DDR4(2133 mhz) + M.2 Serial ATA{SATA} SSD 240gb): Main programmer, used to make this git page, runs win10pro
 
 Samsung Galaxy A21s{SM A217F, esynos 850 : cortex A55 efiiciency cores, ARM Mali-G52 MC1(single core), 4+64gb}(yes i am poor): Photography(as shown in the watermark of each image), progress update in the r/linuxusersindia community, which incouraged me into taking this project seriously, runs Android 12
 
-Acer Spin 1{SP111-31, Intel Pentium N4200 "goldmont"/"Applo Lake" + 8gb DDR3(1600 mhz) + Serial ATA{SATA} SSD 120gb): also for browing reddit and relpying because its too weak, but it runs debian trixie :D(ik i could have not mentioned this)
+Acer Spin 1{SP111-31, Intel Pentium N4200 "goldmont"/"Applo Lake" + 8gb DDR3(1600 mhz) + Serial ATA{SATA} SSD 120gb}: also for browing reddit and relpying because its too weak, but it runs debian trixie :D(ik i could have not mentioned this)
 
 Random Chinese company Bootleg MEGA 2650 + ESP 8226 + Wifi + usb micro chip i got off 8k on amazon(image will be there later on): USB to UART transalator... i know its a wase of money rn, but i have played bad apple on it, so its not a big waste of money...
 
@@ -54,14 +55,22 @@ now, back to the important point, the cpu heatsink is bad at its job, so do this
 ![da cpu](images/20260527_194823.jpg)
 
 ^^Amlogic S905X2 -NU cpu,
+
 4 core cortex A53, FinFET architechture, 12nm processes, 1.8 ghz
-(the redmi note 4 "mido"(not nickel, nickel was a overheating decacore mediatek cpu, china only variant, came before mido), was also a arm cortex A53 cpu, also with a FinFET architecture, but octacore, and 14nm processes, making it less efiicient(larger processes), but more powerful(more cores) at 2ghz)
+(the redmi note 4 "mido" 
+
+(not nickel, nickel was a overheating decacore mediatek cpu, china only variant, came before mido), 
+
+was also a arm cortex A53 cpu, also with a FinFET architecture, but octacore, and 14nm processes, making it less efiicient(larger processes), but more powerful(more cores) at 2ghz)
+
 the amlogic also has a ARM Mali-G31 MP2 (Dual-core, supports OpenGL ES 3.2, Vulkan 1.1, and handles the UI rendering effortlessly)
+
 this was the soc, ready for the ram? well, you can see 2 out of the 4 ram chips, on the motherboard... lets zoom in, shall we?
 
 (ohno, i didnt rotate it... sorry)
 
 ![da ram](images/20260527_194958.jpg)
+
 
 ^^img of 1
 
@@ -111,6 +120,7 @@ sure, there ya go
 ![da back wit da ram](images/20260527_195534.jpg)
 
 we can see the other two ram modules, and oh, what is that 3x3 arrangement of solder blobs?
+
 well that works as a heatsink! its connected directly to them copper traces inside, cuz in that protective layer, they sure will get hot...
 
 =====
@@ -123,3 +133,41 @@ now, for the grand finale, what's the great thing i found?
 
 well, the rx and tx are a UART interface!!
 so, by using that bootleg arduino i have, i can use it to read whaever serial output the little guy gives, AND, write code to this guy!
+
+====
+
+so, what setup does this guy have? well, here ya go!
+
+![da setup!](images/20260528_180207.jpg)
+
+![zoom on uart](images/20260528_180228.jpg)
+|**IMPORTANT**|
+
+as you can see, there are 3 pins connected to that 4 pin uart interface, that is because i didnt connect the 3.3v pwr pon, so that my mega does not emit the magic blue smoke(which is bad)... i conncted the LINUX_TX to pin 1(TX) on my mega, amd connected LINUX_RX to pin 0(RX)... and GND to GND, to have a common grounding...
+
+rest of the images:
+
+![bootleg mega chilling](images/20260528_180247.jpg)
+
+![da fan](images/20260528_180259.jpg)
+
+^^the fan there is a 12v case fan, capable of 8k to 9k rpm, but is running off of 5v, so its pretty quiet, ***why?*** because is is on the veranda, and that gets pretty hot... so does the main board get hot after prolonged usage, this keeps it from throlling (cpu is below, you might be able to see the heatsink, did a fresh repaste after i took that image...)
+
+and, below, is the image of the setup in evening lighting...
+
+![eve-far](images/20260528_192900.jpg)
+
+![eve-connector-close](images/20260528_192905.jpg)
+
+====
+
+now, is the end of updates for the day of 28th of may, '26.
+
+project started on 27th of may, '26
+
+i hope you guys can wait patiently, as i will see what output do i get from the UART, after i turn on the tv and plug in the barrel apadper... that's something for... perhaps tommorow, or maybe later this night...
+
+thank you, u/Careful_Detective189, to share the post of u/Arcade_30 on r/Jio, on r/LinuxUsersIndia, to make me start this project...
+i am a single man dev, 10th grader of cbcse board in india... i have responsibilaties, which make it so that i cannot fully commit, even if i wholeheartedly wanted to... so, please keep patience, as i like to spend my free time, and night sleep hours(i sleep in the afternon too, so its fine), on this projects, and the project between a team of my allen classmates(i am the chief designer and cheif programmer)...
+
+====
