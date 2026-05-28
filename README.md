@@ -143,7 +143,8 @@ so, what setup does this guy have? well, here ya go!
 ![zoom on uart](images/20260528_180228.jpg)
 |**IMPORTANT**|
 
-as you can see, there are 3 pins connected to that 4 pin uart interface, that is because i didnt connect the 3.3v pwr pon, so that my mega does not emit the magic blue smoke(which is bad)... i conncted the LINUX_TX to pin 1(TX) on my mega, amd connected LINUX_RX to pin 0(RX)... and GND to GND, to have a common grounding...
+as you can see, there are 3 pins connected to that 4 pin uart interface, that is because i didnt connect the 3.3v pwr pin, so that my mega does not emit the magic blue smoke(which is bad, and so will yours)... i conncted the LINUX_TX to pin 1(TX) on my mega, amd connected LINUX_RX to pin 0(RX)... and GND to GND, to have a common grounding...(if you use a usb to tty converter for UART, the connect the tx of the usb module, to the rx of our hybrid STB, and vice-versa for the rx of the usb module)...
+also, as you can see, I made a a cheapster style connector, which is just bent jumper wires, to ensure maximum contact... I did not soldier, because the wires will take up space...
 
 rest of the images:
 
@@ -151,7 +152,9 @@ rest of the images:
 
 ![da fan](images/20260528_180259.jpg)
 
-^^the fan there is a 12v case fan, capable of 8k to 9k rpm, but is running off of 5v, so its pretty quiet, ***why?*** because is is on the veranda, and that gets pretty hot... so does the main board get hot after prolonged usage, this keeps it from throlling (cpu is below, you might be able to see the heatsink, did a fresh repaste after i took that image...)
+^^the fan there is a 12v desktop pc case fan of Hewlett Packard (very old, to the point I got it for free), capable of 8k to 9k rpm, but is running off of 5v, so its pretty quiet, 
+
+***why?*** because is is on the veranda(can reach 45°c to 47°c{record, not the usual}), and that gets pretty hot... and so does the main board get hot after even a short period of usage usage, this keeps it from throlling (cpu is below, you might be able to see the heatsink, did a fresh repaste after i took that image...)
 
 and, below, is the image of the setup in evening lighting...
 
