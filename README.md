@@ -174,3 +174,87 @@ thank you, u/Careful_Detective189, to share the post of u/Arcade_30 on r/Jio, on
 i am a single man dev, 10th grader of cbcse board in india... i have responsibilaties, which make it so that i cannot fully commit, even if i wholeheartedly wanted to... so, please keep patience, as i like to spend my free time, and night sleep hours(i sleep in the afternon too, so its fine), on this projects, and the project between a team of my allen classmates(i am the chief designer and cheif programmer)...
 
 ====
+
+29th may, '26, 20h5
+
+i might not have mentioned this... or may have, but, i connected the tx to tx, and rx to rx... which is usual case isnt been done, but we(me n gemini, ofc i am taking aid) took the chance, and booted it up...
+
+```~~~~~.......................................................................~~~~~~~~~~~~~~~~~```
+
+this is what we got at 115200 baud rate... and, it might be because of of a diffrent baud rate, and, because of the tx - rx mixup...
+
+==
+
+29th may, '26, 20h13
+
+did the tx - rx inverse, and set at 921600 baud... which gemi- actually, his name is bard, so imma call him bard... so, bard said that use this setup, or do with another baud rate: 9600... lets try that, because this gave no output... the we will flip the tx - rx back to what it was... 
+
+==
+
+29th may, '26 20h17
+
+yeah, 9600 baud rate gives nothing... ill try this again, by flipping the tx and rx back to what it was (also, if you are wondering how, then i just switched pin 1 on my bootleg mega, to pin 0, and vice versa for pin 0)
+
+===
+
+29th may, '26 20h23
+
+we got them classic boxes at 921600 baud, but we got 
+
+```))))����```
+
+when it turns on, and 
+another square box when the plug is pulled...
+
+so we is sticking to 115200 baud rate... because it might be a parsing issue, as the controller on the bootleg mega needs 3.5v, and the amlogic chip runs at 3.3v... also its not a soldier conner=ction... and 115200 baud means 115200 1s and 0s every second, so, a physical dab connection, is sure as hell going to be unstable, if its quite literally suspended in the air while being blown onby a fan... so i think imma soldier this... also, i got soldier flux for the first time in my life, because i lost the flux they gave with the soldering kit, i got 5 years back(i have been using a mere single spool of this plumbum-stannum alloy... it feels so good to see 2 more spools... i failed a repair of my jailbroken kindle gen 8, just because i had no flux... and because i ripped of the copper pads... great)
+
+====
+
+29th may, '26 20h40
+i realized something...
+
+when it prints
+
+```
+~~~~~.......................................................................~~~~~~~~~~~~~~~~~
+```
+
+it prints this first, 
+
+```
+~~~~~.......................................................................
+```
+
+then prints
+
+```
+~~~~~~~~~~~~~~~~~
+```
+
+and then proceeds to boot to show the jio logo, then the series of ads... and then i pull the plug...
+
+...
+
+these are the boot sequences, right before the os cuts of the uart connection...
+
+***boot sequences?***
+
+yeah, also, bard explained this to me real good, he said:
+
+`Amlogic SoCs don't just boot into the operating system all at once. They run through a strict chain of low-level execution phases based on the ARM Trusted Firmware architecture:
+
+BL1 (The On-Chip ROM): This is un-wipeable code burned directly into the Amlogic silicon at the TSMC factory node layer. The absolute millisecond 12V connects, BL1 wakes up, checks basic hardware rails, and searches the SanDisk eMMC flash chip for the next boot block.
+
+BL2 (First Stage Bootloader): BL2 gets copied into internal SRAM. Its primary job is to initialize your DDR3 system memory controller, waking up those Kingston RAM chips so the system can handle larger files.
+
+BL33 (U-Boot): This is the main deployment bootloader. It initializes the graphic display engine, draws the initial boot logo, and checks if it should hand execution over to the standard OS kernel.`
+
+so, this gives us a small period, before BL33 tells it to muzzle the uart debugging stuff...
+
+maybe we could exploit this? bard suggested a usb method off this dell latitude 7280... ill tell him to explain me better...
+
+====
+
+*end of edit, commiting as ver(0.5)*
+
+====
